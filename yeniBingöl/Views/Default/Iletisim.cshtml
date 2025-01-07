@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "İletişim";
+}
+
+<!-- Google Maps Embed Section -->
+<section class="w3l-contacts-2">
+    <div style="display: flex; justify-content: center; align-items: center; height: 350px; width: 100%;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24846.26077897538!2d40.48024785602974!3d38.88321554733555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4073cf9389c1ea9d%3A0x14f2c982b0b5f7cf!2zQmluZ8O2bCwgQmluZ8O2bCBNZXJrZXovQmluZ8O2bA!5e0!3m2!1str!2str!4v1735252441294!5m2!1str!2str"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="w3l-contacts-12">
+    <div class="wrapper">
+        <div class="contacts12-main">
+            <h3 class="contact-head">İletişim İçin:</h3>
+            <form action="" method="post">
+                <div class="main-input">
+                    <input type="text" name="w3lName" placeholder="Adınız" class="contact-input" required />
+                    <input type="email" name="w3lSender" placeholder="E-posta adresiniz" class="contact-input" required />
+                    <input type="text" name="w3lSubject" placeholder="Konu" class="contact-input" required />
+                </div>
+                <textarea class="contact-textarea" name="w3lMessage" placeholder="Mesajınızı buraya yazın" required></textarea>
+                <button class="actionbg btn">Gönder</button>
+            </form>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,87 @@
+﻿/* Genel ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Wrapper için stil */
+.wrapper2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Merkezi hizalama */
+.center-text {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Özellik img stil */
+.feature-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Liste için stil */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .feature-item:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+.feature-details {
+    padding: 15px;
+    text-align: center;
+}
+
+    .feature-details strong {
+        font-size: 18px;
+        color: #2c3e50;
+    }
+
+    .feature-details p {
+        margin: 10px 0;
+        color: #7f8c8d;
+    }
+
+/* Google Maps stil */
+.w3l-contacts-2 iframe {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

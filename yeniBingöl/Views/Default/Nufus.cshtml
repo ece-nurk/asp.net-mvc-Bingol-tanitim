@@ -1,0 +1,99 @@
+﻿@model yeniBingöl.Models.CityViewModel
+@{
+    ViewBag.Title = "Nüfus ve İlçeler";
+}
+
+<main class="container py-5">
+    <h2 class="text-center">Nüfus ve İlçe Bilgileri</h2>
+
+    <div class="row mt-4">
+        <!-- İlçeler Tablosu -->
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">İlçeler</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">İlçe Adı</th>
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <th scope="col">Aksiyon</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.Ilceler != null && Model.Ilceler.Count > 0)
+                            {
+                                foreach (var ilce in Model.Ilceler)
+                                {
+                                    <tr>
+                                        <td>@ilce.Id</td>
+                                        <td>@ilce.IlceAd</td>
+                                        @if (User.IsInRole("admin"))
+                                        {
+                                            <td>
+                                                <a href="@Url.Action("EditIlce", "Admin", new { id = ilce.Id })" class="btn btn-sm btn-warning">Düzenle</a>
+                                                <a href="@Url.Action("DeleteIlce", "Admin", new { id = ilce.Id })" class="btn btn-sm btn-danger">Sil</a>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="3" class="text-center">Kayıt Bulunamadı</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a href="@Url.Action("AddIlce", "Admin")" class="btn btn-primary">Yeni İlçe Ekle</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Nüfus Tablosu -->
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Nüfus Bilgileri</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Yıl</th>
+                                <th scope="col">Nüfus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.NufusBilgi != null && Model.NufusBilgi.Count > 0)
+                            {
+                                foreach (var nufus in Model.NufusBilgi)
+                                {
+                                    <tr>
+                                        <td>@nufus.YearID</td>
+                                        <td>@nufus.PopulationYear</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="2" class="text-center">Kayıt Bulunamadı</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

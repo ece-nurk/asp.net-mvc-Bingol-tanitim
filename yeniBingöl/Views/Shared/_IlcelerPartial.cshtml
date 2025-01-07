@@ -1,0 +1,25 @@
+﻿@model List<yeniBingöl.Models.Ilceler>
+
+<h2>İlçeler</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>İlçe Adı</th>
+            <th>Aksiyon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ilce in Model)
+        {
+            <tr>
+                <td>@ilce.Id</td>
+                <td>@ilce.IlceAd</td>
+                <td>
+                    <a href="@Url.Action("EditIlce", "Admin", new { id = ilce.Id })" class="btn btn-warning">Düzenle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("AddIlce", "Admin")" class="btn btn-primary">Yeni İlçe Ekle</a>

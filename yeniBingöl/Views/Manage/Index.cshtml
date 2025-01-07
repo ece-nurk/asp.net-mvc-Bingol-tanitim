@@ -1,0 +1,59 @@
+﻿@model yeniBingöl.Models.IndexViewModel
+
+@{
+    ViewBag.Title = "Hesap Yönetimi";
+    string userRole = "Rol tanımlı değil"; // Varsayılan mesaj
+
+    if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("admin"))
+        {
+            userRole = "Yönetici";
+        }
+        else
+        {
+            userRole = "Kullanıcı";
+        }
+
+    }
+}
+
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4 class="mb-0">@ViewBag.Title</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Kullanıcı Bilgisi -->
+                    <div class="mb-4 text-center">
+                        <h5 class="text-success">Bingöl sitemize üye olduğunuz için teşekkürler!</h5>
+                        <p>
+                            Rolünüz: <strong>@userRole</strong>
+                        </p>
+                    </div>
+                    <hr />
+
+                    <!-- Parola Ayarları -->
+                    <h5>Hesap Ayarları</h5>
+                    <dl class="row">
+                        <dt class="col-sm-4">Parola:</dt>
+                        <dd class="col-sm-8">
+                            [
+                            @if (Model.HasPassword)
+                            {
+                                @Html.ActionLink("Parolanızı değiştirin", "ChangePassword")
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Oluştur", "SetPassword")
+                            }
+                            ]
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

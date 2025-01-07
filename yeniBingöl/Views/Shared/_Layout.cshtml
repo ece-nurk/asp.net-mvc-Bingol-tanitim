@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"] Bingöl</title>
+    <link href="~/Content/style-starter.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("languageSelect").addEventListener("change", function () {
+                var selectedLanguage = this.value;
+                window.location.href = '/Default/ChangeLanguage?lang=' + selectedLanguage;
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+    <!-- Header -->
+    <section class="w3l-header-4">
+        <header id="headers4-block">
+            <div class="wrapper">
+                <div class="d-grid nav-mobile-block header-align">
+                    <div class="logo">
+                        <a class="brand-logo" href="/Default/Index"><span>Bingöl</span></a>
+                    </div>
+                    <input type="checkbox" id="nav" />
+                    <label class="nav" for="nav"></label>
+                    <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop">
+                        @Html.Partial("_MenuPartial")
+                    </nav>
+                    <!-- Login/Register -->
+                    <div class="login-register">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    </section>
+
+    <!-- Dinamik İçerik -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <section class="w3l-footer-29-main">
+        <div class="footer-29">
+            <div class="d-grid grid-col-2 bottom-copies">
+                <p class="copy-footer-29">   Ece Nur Koylan    <a href="https://w3layouts.com">KaynakSahibi</a></p>
+                <ul class="list-btm-29">
+                    <li>
+                        <select id="languageSelect">
+                            <option value="lang">Language</option>
+                            <option value="tr">Türkçe</option>
+                            <option value="en">English</option>
+                        </select>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Move to Top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            document.getElementById("movetop").style.display = document.documentElement.scrollTop > 20 ? "block" : "none";
+        }
+
+        function topFunction() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿ @{   
+     ViewBag.Title =yeniBingöl.Kaynak.lang.menu1;
+
+ }
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+<ul class="menu">
+    <li><a href="/Default/Index">
+    @yeniBingöl.Kaynak.lang.menu1
+</a></li>
+
+    <li><a href="/Default/Nufus">
+    @yeniBingöl.Kaynak.lang.menu2
+</a></li>
+    <li><a href="/Default/Tarih">
+    @yeniBingöl.Kaynak.lang.menu3
+</a></li>
+    <li><a href="/Default/Iletisim">
+    @yeniBingöl.Kaynak.lang.menu4
+</a></li>
+    @if (User.IsInRole("Admin"))
+    {
+        <li><a href="/Admin/Index">Admin Paneli</a></li>
+    }
+    else if (User.Identity.IsAuthenticated)
+    {
+    }
+</ul>

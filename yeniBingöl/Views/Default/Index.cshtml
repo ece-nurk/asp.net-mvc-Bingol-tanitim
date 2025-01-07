@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title =yeniBingöl.Kaynak.lang.deger1;   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Anasayfa";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<section class="w3l-covers-4">
+    <div id="covers4-block">
+        <div class="main-slider">
+            <div class="csslider infinity" id="slider1">
+                @* Dinamik olarak slider *@
+                @if (ViewBag.Fotolar != null)
+                {
+                    int index = 1;
+                    foreach (var foto in ViewBag.Fotolar)
+                    {
+                        <input type="radio" name="slides" id="slides_@index" @(index == 1 ? "checked='checked'" : "") />
+                        index++;
+                    }
+                }
+
+                <ul>
+                    @if (ViewBag.Fotolar != null)
+                    {
+                        int index = 1;
+                        foreach (var foto in ViewBag.Fotolar)
+                        {
+                            <li class="slider-bg-@index" style="background-image: url('@foto.Url');">
+                                <div class="slider-info-wrapper">
+                                    <div class="slider-info">
+                                        <div class="d-grid slide-two-col">
+                                            <div class="slide-left-text">
+                                                <h3>Bingöl ve eşsiz güzellikleri</h3>
+                                                <h3><span>@foto.Baslik</span></h3>
+                                                <p>
+                                                    Kendi kendine hareket eden bu doğa harikası, Bingöl’ün eşsiz güzelliklerinden biridir.Yüzen Ada, doğa severler için benzersiz bir deneyim sunar.
+                                                </p>
+                                                <a href="/Default/Tarih" class="btn button-style">Tarih ve Turistik Yerler</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            index++;
+                        }
+                    }
+                </ul>
+
+                <div class="arrows">
+                    @if (ViewBag.Fotolar != null)
+                    {
+                        int index = 1;
+                        foreach (var foto in ViewBag.Fotolar)
+                        {
+                            <label for="slides_@index"></label>
+                            index++;
+                        }
+                    }
+                </div>
+                <div class="navigation">
+                    <div>
+                        @if (ViewBag.Fotolar != null)
+                        {
+                            int index = 1;
+                            foreach (var foto in ViewBag.Fotolar)
+                            {
+                                <label for="slides_@index"></label>
+                                index++;
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- covers4 block++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<section class="w3l-feature-8">
+    <div class="features-main">
+        <div class="wrapper">
+            <div class="features">
+                <div class="feature-1">
+                    <div class="feature-body">
+                        <div class="feature-images">
+                            <span class="fa fa-quote-left"></span>
+                        </div>
+                        <div class="feature-info">
+                            <h3 class="feature-titel">
+                                @yeniBingöl.Kaynak.lang.deger1
+                            </h3>
+                            <p class="feature-text">
+                                @yeniBingöl.Kaynak.lang.deger2
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-2">
+                    <div class="feature-body">
+                        <div class="feature-images">
+                            <span class="fa fa-tree"></span>
+                        </div>
+                        <div class="feature-info">
+                            <h3 class="feature-titel">
+                                @yeniBingöl.Kaynak.lang.deger3
+                            </h3>
+                            <p class="feature-text">
+                                @yeniBingöl.Kaynak.lang.deger4
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-3">
+                    <div class="feature-body">
+                        <div class="feature-images">
+                            <span class="fa fa-quote-right"></span>
+                        </div>
+                        <div class="feature-info">
+                            <h3 class="feature-titel">
+                                @yeniBingöl.Kaynak.lang.deger5
+                            </h3>
+                            <p class="feature-text">
+                                @yeniBingöl.Kaynak.lang.deger6
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- js -->
+<script src="~/Content/jquery-3.3.1.min.js"></script> <!-- jquery latest version 3.4.1 -->
+<script src="~/Content/owl.carousel.js"></script> <!-- owl carousel -->
+
+<script>
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: false,
+                    margin: 20
+                },
+                1000: {
+                    items: 3,
+                    nav: true,
+                    loop: true,
+                    margin: 20
+                }
+            }
+        })
+    })</script>
+

@@ -1,0 +1,14 @@
+﻿@model yeniBingöl.Models.Ilceler
+
+<h2>Yeni İlçe Ekle</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div>
+    <label>İlçe Adı:</label>
+    @Html.TextBoxFor(model => model.IlceAd)
+    @Html.ValidationMessageFor(model => model.IlceAd, "", new { @class = "text-danger" })
+
+</div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+}

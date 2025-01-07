@@ -1,0 +1,10 @@
+﻿@model yeniBingöl.Models.Ilceler
+
+<h2>Delete District</h2>
+
+@using (Html.BeginForm("DeleteIlce", "Admin", new { id = Model.Id }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a href="@Url.Action("Index", "Admin")" class="btn btn-secondary">Cancel</a>
+}
