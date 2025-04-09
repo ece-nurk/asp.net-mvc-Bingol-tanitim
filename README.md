@@ -1,11 +1,21 @@
-Bazı Site Görselleri:
-![Ekran görüntüsü 2025-01-05 192417](https://github.com/user-attachments/assets/eac8eeeb-c4d8-403a-8299-2e15f5cbe912)
-![Ekran görüntüsü 2025-01-05 192504](https://github.com/user-attachments/assets/fe6942a4-88c4-4700-b77d-8c3504dd1041)
-![Ekran görüntüsü 2025-01-05 192549](https://github.com/user-attachments/assets/58e9e4c1-29da-42a3-82ae-5af6b706a1a0)
-![Ekran görüntüsü 2025-01-05 192653](https://github.com/user-attachments/assets/25a48a7f-153a-4c2e-a696-4969df11f859)
-![Ekran görüntüsü 2025-01-05 192844](https://github.com/user-attachments/assets/440600ab-591e-498b-a4e4-48c5c6ec0572)
-![Ekran görüntüsü 2025-01-05 193009](https://github.com/user-attachments/assets/862b21a4-7227-4049-a95d-16c3eb5f0889)
-![Ekran görüntüsü 2025-01-05 192932](https://github.com/user-attachments/assets/b452445a-bbe6-4349-ae97-3d4c45d0b992)
-![Ekran görüntüsü 2025-01-05 193757](https://github.com/user-attachments/assets/d1692274-c0b4-4670-92ea-db3340598ce0)
-![Ekran görüntüsü 2025-01-05 193836](https://github.com/user-attachments/assets/94c9654f-dc1c-4ae2-a6d2-7fcc039a80df)
-template sahibi: https://w3layouts.com/
+## Bazı Site Görselleri
+
+### Anasayfa
+![Anasayfa](https://github.com/ece-nurk/asp.net-mvc-Bingol-tanitim/blob/9400bb4f81fca79d958f88ef74ea472d3a87a181/web%20sitesi%20g%C3%B6rselleri/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-04-09%20135632.png?raw=true)
+
+### Nüfus ve İlçe
+![Nüfus](https://github.com/ece-nurk/asp.net-mvc-Bingol-tanitim/blob/9400bb4f81fca79d958f88ef74ea472d3a87a181/web%20sitesi%20g%C3%B6rselleri/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-04-09%20135813.png?raw=true)
+
+### Nüfus veİlçeler Admin Düzenleme
+![İlçeler](https://github.com/ece-nurk/asp.net-mvc-Bingol-tanitim/blob/9400bb4f81fca79d958f88ef74ea472d3a87a181/web%20sitesi%20g%C3%B6rselleri/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-04-09%20135947.png?raw=true)
+
+### Tarih ve Turistik Yerler
+![Tarih](https://github.com/ece-nurk/asp.net-mvc-Bingol-tanitim/blob/9400bb4f81fca79d958f88ef74ea472d3a87a181/web%20sitesi%20g%C3%B6rselleri/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-04-09%20135844.png?raw=true)
+
+### Tarih ve Turistik Yerler
+![Turistik](https://github.com/ece-nurk/asp.net-mvc-Bingol-tanitim/blob/9400bb4f81fca79d958f88ef74ea472d3a87a181/web%20sitesi%20g%C3%B6rselleri/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-04-09%20135856.png?raw=true)
+
+---
+
+**Template Sahibi:**  
+🔗 [W3Layouts.com](https://w3layouts.com/)
